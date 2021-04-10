@@ -1,0 +1,15 @@
+<div class='modale' style="height: 100%;">
+    <div class='modaleTiltle' style="    align-content: center;">
+        <h3 style=" font-family: 'Gotham'; ">Compliment Template</h3>
+    </div>
+    <div class="field-wrap">
+     <div> <label style=" font-family: 'Gotham'; ">
+          Compliment Name
+        </label></div>  
+        <input [(ngModel)]="complaimentViewModel.name" type="text"/>
+      </div>
+        <div class="body">
+            <div><label style=" font-family: 'Gotham'; ">Compliment Descreption</label></div>
+            <div ><textarea [(ngModel)]="complaimentViewModel.description"  rows="20"></textarea></div>
+    <button mat-raised-button [mat-dialog-close]="true" (click)=createComplimentTemplate()>save</button></div>
+</div>

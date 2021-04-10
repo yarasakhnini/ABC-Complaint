@@ -1,0 +1,59 @@
+<div class="page"  >
+   
+    <div class="row px-80" style="margin-top: 20px;">
+      <span class="component-title" style="font-family: Gotham; ">Compliments</span>
+    </div>
+    <div class="row px-80 ">
+        <button mat-raised-button [matMenuTriggerFor]="menu" class="m-1"style="border: #3086f7 solid 1px;color:#3086f7 ;font-size: 13px ;box-shadow: none;" >
+            Change Compliments Status
+            <mat-icon style="color:#3086f7 ;font-size: 13px; margin-top: 8%;" >keyboard_arrow_down</mat-icon>
+          </button> 
+          <mat-menu #menu="matMenu" >
+            <button  mat-menu-item (click)="UpdateStatusSelection('pending')">pending</button>
+            <button  mat-menu-item (click)="UpdateStatusSelection('solved')">solved</button>
+          </mat-menu>   
+          <mat-form-field class="example-full-width search-input" style="font-family: Gotham;">
+          <mat-label style="font-family: Gotham-Bold; " >Search</mat-label>
+          <input (keyup)="applayFilter($event.target.value)" matInput placeholder="Search">
+        </mat-form-field>
+    </div>
+    <div class="row px-80" >
+      <table mat-table matTableExporter [dataSource]="dataSource"  >
+        <ng-container matColumnDef="chked">
+            <th mat-header-cell *matHeaderCellDef class="mt-tbl mt-tbl-th mt-tbl-chked">
+                <mat-checkbox (change)="$event ? masterToggle() : null"
+                [checked]="selection.hasValue() && isAllSelected()"
+                [indeterminate]="selection.hasValue() && !isAllSelected()">
+                </mat-checkbox>
+            </th>
+            <td mat-cell *matCellDef="let element" class="mt-tbl mt-tbl-td mt-tbl-chked"> 
+              <mat-checkbox (click)="$event.stopPropagation()"
+              (change)="$event ? selection.toggle(element) : null"
+              [checked]="selection.isSelected(element)"
+    ></mat-checkbox>        </td>
+        </ng-container>
+        <ng-container matColumnDef="ComplimentName">
+          <th mat-header-cell *matHeaderCellDef style="font-family: 'Gotham';" class="mt-tbl mt-tbl-th mt-tbl-userid">Compliment Name</th>
+          <td mat-cell *matCellDef="let element" class="mt-tbl mt-tbl-td mt-tbl-userid" > {{element.name}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="ComplimentDescreption">
+          <th mat-header-cell *matHeaderCellDef  style="font-family: Gotham; "class="mt-tbl mt-tbl-th mt-tbl-lname">Compliment Descreption</th>
+          <td mat-cell *matCellDef="let element"style="font-family: Gotham; " class="mt-tbl mt-tbl-td mt-tbl-lname" > {{element.description}} </td>
+        </ng-container>
+       
+    
+        <ng-container matColumnDef="ComplimentStatus">
+          <th mat-header-cell *matHeaderCellDef style="font-family: Gotham; "class="mt-tbl mt-tbl-th mt-tbl-lname" >Compliment Status</th>
+          <td mat-cell *matCellDef="let element"style="font-family: Gotham; " class="mt-tbl mt-tbl-td mt-tbl-lname"  > {{element.status}} </td>
+        </ng-container>
+    
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+    <div class="row px-80">
+      <mat-paginator #paginator  [pageSize]="10" [pageSizeOptions]="[5, 10, 15,20]" ></mat-paginator>
+     </div>
+    </div>

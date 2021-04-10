@@ -1,0 +1,26 @@
+<html class="page"   >
+
+  
+    <div>
+      <div class="form" >   
+        <h1>Welcome Back!</h1>
+        
+        <form >
+  
+          <input placeholder="email" type="email" [(ngModel)]="loginViewModel.Email" style="margin-bottom: 2%;"  name="username"/>
+          <input placeholder="password" type="password" [(ngModel)]="loginViewModel.Password"  name="password"/>
+          
+        <div  style = "margin-top: 3%; height:70%">
+     <div><button  class="button button-block" (click)=onSubmit() style="margin-bottom: 5%; "> 
+      <div>Log In</div>
+    </button> 
+     </div>
+      </div>
+        <p class="forgot" style="text-align: center;"><a href="#" routerLink="/CreateAccount">Create Account!</a></p>
+        </form>
+      </div>
+    </div>
+  </html>
+  
+    
+  

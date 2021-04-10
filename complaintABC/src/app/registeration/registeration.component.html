@@ -1,0 +1,94 @@
+<div class="page">
+
+ 
+   
+    <div class="form">
+      <mat-tab-group>
+      <mat-tab style="float: left; color: #3086f7;" label="User Regesteration"> 
+      <div>
+        <h1>Sign Up</h1>
+        <h2>please fill in this form to create an account!</h2>
+  
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input [(ngModel)]="userRegesterationViewModel.firstname" type="text" required autocomplete="off"  />
+            </div>
+  
+            <div class="field-wrap">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input [(ngModel)]="userRegesterationViewModel.lastname" type="text" required autocomplete="off"   />
+            </div>
+  
+      
+          </div>
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input [(ngModel)]="userRegesterationViewModel.Email" type="email" required autocomplete="off"  />
+          </div>
+          <div class="field-wrap">
+            <label>
+              Set Password<span class="req">*</span>
+            </label>
+            <input [(ngModel)]="userRegesterationViewModel.Password" type="email" required autocomplete="off"  />
+          </div>
+          </div>
+
+          <button type="submit" cli (click)=createUserAccount()  class="button button-block">Get Started</button>
+        </mat-tab>
+        <mat-tab style="float: right; color: #3086f7;"  label="Admin Regesteration"> 
+          <div>
+            <h1>Sign Up</h1>
+            <h2>please fill in this form to create an account!</h2>
+      
+              <div class="top-row">
+                <div class="field-wrap">
+                  <label>
+                    First Name<span class="req">*</span>
+                  </label>
+                  <input [(ngModel)]="AdminRegesterationViewModel.firstname" type="text" required autocomplete="off"  />
+                </div>
+      
+                <div class="field-wrap">
+                  <label>
+                    Last Name<span class="req">*</span>
+                  </label>
+                  <input [(ngModel)]="AdminRegesterationViewModel.lastname" type="text" required autocomplete="off"   />
+                </div>
+      
+          
+              </div>
+              <div class="field-wrap">
+                <label>
+                  Email Address<span class="req">*</span>
+                </label>
+                <input [(ngModel)]="AdminRegesterationViewModel.Email" type="email" required autocomplete="off"  />
+              </div>
+              <div class="field-wrap">
+                <label>
+                  Set Password<span class="req">*</span>
+                </label>
+                <input [(ngModel)]="AdminRegesterationViewModel.Password"  type="email" required autocomplete="off"  />
+              </div>
+              </div>
+    
+              <button type="submit" (click)=createAdminAccount()  class="button button-block">Get Started</button>
+        </mat-tab>
+      </mat-tab-group>
+        </div>
+      
+        
+  </div>
+    
+  
+  
+      <!-- </div>  -->
+ 
+  <!-- /form -->
+  

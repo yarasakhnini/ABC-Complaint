@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "string",
+      "lastname": "string",
+      "Email": "string",
+      "Role": "Admin",
+      "Password": "string"
+    },
+    {
+      "firstname": "Ahmad",
+      "lastname": "Atari",
+      "Email": "ahmad.test@sprintward.com",
+      "Role": "User",
+      "Password": "123456",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "firstname": "Ahmad",
+      "lastname": "test",
+      "Email": "yara.sakhnini@sprintward.com",
+      "Role": "User",
+      "Password": "123456"
+    },
+    {
+      "firstname": "yara",
+      "lastname": "sakhnini",
+      "Email": "yara.sakhnini@hotmail.com",
+      "Role": "User",
+      "Password": "1234",
+      "id": 4
+    }
+  ],
+  "userLogin": [
+    {
+      "Email": "string",
+      "Password": "string"
+    }
+  ],
+  "Complaimnt": [
+    {
+      "userID": 2,
+      "id": 1,
+      "name": "string",
+      "description": "string",
+      "status": "pending"
+    },
+    {
+      "userID": 2,
+      "id": 1,
+      "name": "string",
+      "description": "string",
+      "status": "seen"
+    },
+    {
+      "userID": 3,
+      "id": 1,
+      "name": "string",
+      "description": "string",
+      "status": "seen"
+    },
+    {
+      "0": {
+        "userID": 3,
+        "name": "string33",
+        "description": "string33",
+        "status": "not seen yet",
+        "id": 2
+      },
+      "userID": 3,
+      "name": "string33",
+      "description": "string33",
+      "status": "seen",
+      "id": 2
+    },
+    {
+      "name": "string33",
+      "description": "string33",
+      "status": "seen",
+      "id": 3,
+      "userID": 1
+    },
+    {
+      "userID": 1,
+      "name": "ddddddddddd",
+      "description": "ddddddddddddddddddddd",
+      "status": "solved",
+      "id": 4
+    },
+    {
+      "userID": 1,
+      "name": "xxxxxxxxxxxxxxxxx",
+      "description": "xxxxxxxxxxxxxxxxxxxxx",
+      "status": "seen",
+      "id": 5
+    },
+    {
+      "userID": 4,
+      "name": "xxxxxxxxxxx",
+      "description": "xxxxxxxxxxxxxxxx",
+      "status": "seen",
+      "id": 6
+    }
+  ]
+}
